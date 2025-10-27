@@ -29,6 +29,8 @@ else:
             addInRadius(a, b, dimension)
             count += 1
 
+print("\n")
+
 for y in range(dimension - 1, -1, -1):
     currentLine = ""
     for x in range(dimension):
@@ -40,3 +42,6 @@ for y in range(dimension - 1, -1, -1):
         else:
             currentLine += f"||{emojis[cell+1]}||"
     print(currentLine)
+
+print("\n")
+print("copy that part ^")
