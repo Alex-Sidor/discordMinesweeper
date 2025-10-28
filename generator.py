@@ -40,7 +40,7 @@ for y in range(dimension - 1, -1, -1):
         elif cell == 0:
             currentLine += "||⬜||"
         else:
-            currentLine += f"||{emojis[cell+1]}||"
+            currentLine += f"||{emojis[cell-1]}||"
     print(currentLine)
 
 print("\n")
