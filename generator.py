@@ -29,6 +29,17 @@ else:
             addInRadius(a, b, dimension)
             count += 1
 
+startx = -1
+starty = -1
+
+while startx == -1:
+    a = random.randint(0, dimension - 1)
+    b = random.randint(0, dimension - 1)
+    if board[a][b] == 0:
+            startx = a
+            starty = b
+
+
 print("\n")
 
 for y in range(dimension - 1, -1, -1):
@@ -38,7 +49,10 @@ for y in range(dimension - 1, -1, -1):
         if cell == -1:
             currentLine += "||:bomb:||"
         elif cell == 0:
-            currentLine += "||⬜||"
+            if(startx == x and starty == y):
+                currentLine += "⬜"
+            else:
+                currentLine += "||⬜||"
         else:
             currentLine += f"||{emojis[cell-1]}||"
     print(currentLine)
